@@ -168,6 +168,7 @@ hr {
   margin: 0 10px;
   width: 200px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 1.3em;
   padding-bottom: 1.3em;
