@@ -1,30 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Open+Sans&display=swap");
 html {
   overflow-x: hidden;
 }
-body{
+body {
   background-color: #eecfda;
+  width: 100%;
+  height: 100%;
 }
 
+.retro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 p {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 20px;
   font-weight: bold;
   color: #8f315c;
 }
-a p:hover{
+a p:hover {
   color: black;
 }
 
 span {
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-    font-weight: bold;
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 h1 {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 100px;
+  font-weight: 300;
   align-items: center;
   text-align: center;
   margin: 0px;
@@ -50,16 +58,13 @@ a:hover {
 }
 
 hr {
-  width: 62.5em;
   margin: 0 auto;
   border-top: 1px solid #bc1a93;
   padding-bottom: 20px;
 }
-.desc{
+.desc {
   text-align: center;
 }
-
-
 
 /* 02. Intro
  * =================================================================== */
@@ -111,37 +116,49 @@ hr {
   opacity: 0.9;
 } */
 
-.retro-window {
-  margin-left: 15em;
-  margin-right: 15em;
-  margin-top: 1.5em;
+.margins {
+  margin: 0 380px;
+}
 
+.retro-window {
+  padding: 0 10px;
+  margin-top: 1.5em;
+  position: relative;
   background: #f8ecf3;
   border: 2px solid #231f20;
 }
 
+.margin-top {
+  margin-top: 60px;
+}
 .topbar {
-    height: 3rem;
-background: #a314a8;
-border: 2px solid #231F20;
-display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 0 0 10px;
+  background: #a314a8;
+  border-bottom: 2px solid #231f20;
+  display: flex;
+
   justify-content: space-between;
 }
 .topbar-text {
-  font-family: 'Inconsolata', monospace;
-font-size: 20px;
-font-weight: bold;
-display: inline-block;
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
 
-color: #f8ecf3;
+  color: #f8ecf3;
 }
 .topbar-close {
-  font-family: 'Inconsolata', monospace;
-font-size: 17px;
-font-weight: bold;
-display: inline-block;
-opacity: 1;
-color: black;
+  font-family: "Inconsolata", monospace;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;
+  opacity: 1;
+  color: black;
 }
 
 /* 03. Social Icons
@@ -149,32 +166,31 @@ color: black;
 
 .social {
   margin: 0 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
   padding-top: 1.3em;
   padding-bottom: 1.3em;
   text-align: center;
-  color:#a314a8;
+  color: #a314a8;
   font-size: 0.9em;
-  
 }
 
 .gear {
-    width: 70px;
-    height: auto;
-    position: relative;
-    top: 2.5em;
-    
+  width: 70px;
+  height: auto;
+  position: relative;
+  top: 2.5em;
 }
 
 .social a {
   color: #a314a8;
   text-decoration: none;
-  padding: 2em;
 }
 
 .social a:hover {
   opacity: 0.6;
 }
-
 
 /* 04. Icon Font
  * =================================================================== */
@@ -220,8 +236,6 @@ color: black;
   border-top: 5px solid #fff;
 }
 
-
-
 /* 05. Footer
  * =================================================================== */
 
@@ -230,7 +244,7 @@ footer {
   display: block;
   position: static;
   bottom: 0;
-  background-color:#f8ecf3;
+  background-color: #f8ecf3;
   color: black;
   padding: 50px 0;
 }
@@ -242,9 +256,51 @@ footer p {
 
 h5 {
   margin-top: 25px;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   align-items: center;
   text-align: center;
-font-size: 25px;
+  font-size: 25px;
   color: #000000;
+}
+
+.logo-img {
+  width: 190px;
+}
+
+@media screen and (max-width: 1440px) {
+  .margins {
+    margin: 0 300px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .margins {
+    margin: 0 220px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo-img {
+    width: 120px;
+  }
+
+  .margins {
+    margin: 25px 100px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .retro-window {
+    margin: 25px 0;
+  }
+  .intro h1 {
+    font-size: 47px;
+  }
+  .row {
+    margin: 0;
+  }
+  .footer p {
+    padding: 0;
+  }
 }
